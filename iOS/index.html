@@ -1,0 +1,551 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A lightweight user interface for Wirecard Payment Gateway">
+      
+      
+      
+        <meta name="author" content="paymentSDK Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>iOS - Mobile paymentSDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400i,700|Fira+Mono">
+        <style>body,input{font-family:"Titillium Web","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#integration-on-ios" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Mobile paymentSDK" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">developer_mode</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Mobile paymentSDK
+              </span>
+              <span class="md-header-nav__topic">
+                iOS
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">developer_mode</i>
+      
+    </span>
+    Mobile paymentSDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../android/" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        iOS
+      </label>
+    
+    <a href="./" title="iOS" class="md-nav__link md-nav__link--active">
+      iOS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-paymentsdk" title="Getting paymentSDK" class="md-nav__link">
+    Getting paymentSDK
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-libraries" title="External Libraries" class="md-nav__link">
+    External Libraries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-examples" title="Code Examples" class="md-nav__link">
+    Code Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay" title="Apple Pay" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-start" title="Before you start" class="md-nav__link">
+    Before you start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-examples" title="Payment Examples" class="md-nav__link">
+    Payment Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-wdapplepaypayment" title="Using WDApplePayPayment" class="md-nav__link">
+    Using WDApplePayPayment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-paymentsdk" title="Getting paymentSDK" class="md-nav__link">
+    Getting paymentSDK
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#external-libraries" title="External Libraries" class="md-nav__link">
+    External Libraries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-examples" title="Code Examples" class="md-nav__link">
+    Code Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apple-pay" title="Apple Pay" class="md-nav__link">
+    Apple Pay
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-start" title="Before you start" class="md-nav__link">
+    Before you start
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-examples" title="Payment Examples" class="md-nav__link">
+    Payment Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-wdapplepaypayment" title="Using WDApplePayPayment" class="md-nav__link">
+    Using WDApplePayPayment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="integration-on-ios">Integration on iOS<a class="headerlink" href="#integration-on-ios" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><img alt="" src="https://s20.postimg.org/6p3gtxtvx/cog24.png" /> The device cannot be jail-broken and must run at least iOS 7 for paymentSDK to work. It is recommended to use the latest stable version of Xcode.</p>
+</blockquote>
+<h2 id="getting-paymentsdk">Getting paymentSDK<a class="headerlink" href="#getting-paymentsdk" title="Permanent link">&para;</a></h2>
+<p>Download the pod at our <a href="https://github.com/wirecard/paymentSDK-iOS">GitHub repository</a> and add it to your <em>Podfile</em>:</p>
+<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="err">&#39;</span><span class="n">paymentSDK</span><span class="err">&#39;</span>
+</pre></div>
+
+
+<h3 id="external-libraries">External Libraries<a class="headerlink" href="#external-libraries" title="Permanent link">&para;</a></h3>
+<h2 id="code-examples">Code Examples<a class="headerlink" href="#code-examples" title="Permanent link">&para;</a></h2>
+<p>In this section, you will find code examples of basic transactions for each payment method.</p>
+<h3 id="apple-pay">Apple Pay<a class="headerlink" href="#apple-pay" title="Permanent link">&para;</a></h3>
+<h4 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><img alt="" src="https://s20.postimg.org/mksax8kgd/bulb24.png" /> We assume that you have access to your testing environment at this point. </p>
+</blockquote>
+<p>Since Apple Pay is a proprietary service, the setup process is a bit more complicated.</p>
+<p>For setup, you need to:</p>
+<ol>
+<li>Contact our merchant support to <a href="https://confluence.wirecard.sys/display/EE/Merchant+Set+up">create a test Elastic Engine Apple Pay merchant account</a> and <a href="https://confluence.wirecard.sys/display/EE/Apple+Merchant+Identifier+setup">set up its Apple Merchant ID</a>.</li>
+<li>Depending on whether you had an existing Apple Merchant ID, you will need to:</li>
+<li>upload the CSR file you've received in the previous step, </li>
+<li>register with the Apple Merchant ID provided from us, AND upload the CSR file</li>
+</ol>
+<p>Additional information can be found in <a href="https://developer.apple.com/library/content/ApplePay_Guide/Configuration.html">Apple's own documentation</a>.</p>
+<p>After you've set up your accounts:
+1. You can <a href="https://developer.apple.com/support/apple-pay-sandbox/">add a test card</a> to the Wallet app.
+2. Integrate paymentSDK into your application
+3. Conduct testing
+4. Add a live card to the Wallet app and switch the Elastic Engine instance to production mode (do not forget to use production credentials - <em>MAID/SK/AppleMerchantID/csr</em>)</p>
+<h4 id="payment-examples">Payment Examples<a class="headerlink" href="#payment-examples" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>For Apple Pay, we recommend that you only use paymentSDK for the <strong>purchase</strong> &amp; <strong>authorization</strong> transaction types because of the inherent limitations of the mobile platform.</p>
+</blockquote>
+<p>There are two approaches here, depending on your requirements:
+1. You need full control over <em>PKPaymentRequest</em> (dynamic shipping methods and pricing); use <strong><code>WDApplePayPayment</code></strong>
+2. If you only do simple transactions with a fixed shipping price, use <code>WDApplePayManagedPayment</code>, and paymentSDK will handle the <em>PKPaymentRequest</em> by itself</p>
+<p>Additionally, you can find a list of merchant-server-to-Elastic-Engine REST request examples <a href="https://confluence.wirecard.sys/display/EE/Apple+Pay+in+Europe#ApplePayinEurope-ExampleRequests">here</a>.</p>
+<h5 id="using-wdapplepaypayment">Using WDApplePayPayment<a class="headerlink" href="#using-wdapplepaypayment" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Initialize <code>WDClient</code>:</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">paymentAuthorizationViewController:</span><span class="p">(</span><span class="bp">PKPaymentAuthorizationViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
+                       <span class="nf">didAuthorizePayment:</span><span class="p">(</span><span class="bp">PKPayment</span> <span class="o">*</span><span class="p">)</span><span class="nv">payment</span>
+                                <span class="nf">completion:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">PKPaymentAuthorizationStatus</span> <span class="n">status</span><span class="p">))</span><span class="nv">completion</span>
+<span class="p">{</span>
+    <span class="c1">// it is better to keep client as property to keep reference</span>
+    <span class="n">WDClient</span> <span class="o">*</span><span class="n">client</span> <span class="o">=</span> <span class="p">[[</span><span class="n">WDClient</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithEnvironment</span><span class="p">:</span><span class="n">WDEnvironmentTEST</span><span class="p">];</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../android/" title="Android" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Android
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright placeholder
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/wirecard" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
