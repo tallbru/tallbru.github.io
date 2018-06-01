@@ -177,8 +177,23 @@
         },
         {
             "location": "/tabtest/",
-            "text": "C\nprintf\n(\n\"HELLO WORLD!\"\n);\n\n\nJava\nSystem\n.\nout\n.\nprintln\n(\n\"HELLO WORLD!\"\n);\n\n\nPython\nprint\n(\n\"HELLO WORLD!\"\n)",
+            "text": "Lorem Ipsum\n\u00b6\n\n\nC\nprintf\n(\n\"HELLO WORLD!\"\n);\n\n\nJava\nSystem\n.\nout\n.\nprintln\n(\n\"HELLO WORLD!\"\n);\n\n\nPython\nprint\n(\n\"HELLO WORLD!\"\n)\n\n\n\n\n\n1\n\n\nLorem Gypsum\n\u00b6\n\n\nC\nprintf\n(\n\"HELLO WORLD!\"\n);\n\n\nJava\nSystem\n.\nout\n.\nprintln\n(\n\"HELLO WORLD!\"\n);\n\n\nPython\nprint\n(\n\"HELLO WORLD!\"\n)\n\n\n\n\n\n2\n\n\nLorem Hipsum\n\u00b6\n\n\nC\nprintf\n(\n\"HELLO WORLD!\"\n);\n\n\nJava\nSystem\n.\nout\n.\nprintln\n(\n\"HELLO WORLD!\"\n);\n\n\nPython\nprint\n(\n\"HELLO WORLD!\"\n)\n\n\n\n\n\n3",
             "title": "Tabs Test"
+        },
+        {
+            "location": "/tabtest/#lorem-ipsum",
+            "text": "C printf ( \"HELLO WORLD!\" );  Java System . out . println ( \"HELLO WORLD!\" );  Python print ( \"HELLO WORLD!\" )   1",
+            "title": "Lorem Ipsum"
+        },
+        {
+            "location": "/tabtest/#lorem-gypsum",
+            "text": "C printf ( \"HELLO WORLD!\" );  Java System . out . println ( \"HELLO WORLD!\" );  Python print ( \"HELLO WORLD!\" )   2",
+            "title": "Lorem Gypsum"
+        },
+        {
+            "location": "/tabtest/#lorem-hipsum",
+            "text": "C printf ( \"HELLO WORLD!\" );  Java System . out . println ( \"HELLO WORLD!\" );  Python print ( \"HELLO WORLD!\" )   3",
+            "title": "Lorem Hipsum"
         }
     ]
 }
