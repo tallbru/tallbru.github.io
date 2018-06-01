@@ -1,0 +1,569 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A lightweight user interface for Wirecard Payment Gateway">
+      
+      
+        <link rel="canonical" href="http://tallbru.github.io/sigv2/">
+      
+      
+        <meta name="author" content="paymentSDK Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Signature v2 - Mobile paymentSDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400i,700|Fira+Mono">
+        <style>body,input{font-family:"Titillium Web","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../css/code-tabs.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#signature-v2" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://tallbru.github.io" title="Mobile paymentSDK" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">developer_mode</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Mobile paymentSDK
+              </span>
+              <span class="md-header-nav__topic">
+                Signature v2
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">developer_mode</i>
+      
+    </span>
+    Mobile paymentSDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../android/" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../iOS/" title="iOS" class="md-nav__link">
+      iOS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Signature v2
+      </label>
+    
+    <a href="./" title="Signature v2" class="md-nav__link md-nav__link--active">
+      Signature v2
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-by-signature" title="Authentication by Signature" class="md-nav__link">
+    Authentication by Signature
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-role-of-the-secret-key" title="The Role of the Secret Key" class="md-nav__link">
+    The Role of the Secret Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" title="Format" class="md-nav__link">
+    Format
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-mobile" title="For Mobile" class="md-nav__link">
+    For Mobile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-seamless-and-hosted-payment-pagesembedded-payment-pages" title="For Seamless and Hosted Payment Pages/Embedded Payment Pages" class="md-nav__link">
+    For Seamless and Hosted Payment Pages/Embedded Payment Pages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tabtest/" title="Tabs Test" class="md-nav__link">
+      Tabs Test
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-by-signature" title="Authentication by Signature" class="md-nav__link">
+    Authentication by Signature
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-role-of-the-secret-key" title="The Role of the Secret Key" class="md-nav__link">
+    The Role of the Secret Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" title="Format" class="md-nav__link">
+    Format
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-mobile" title="For Mobile" class="md-nav__link">
+    For Mobile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-seamless-and-hosted-payment-pagesembedded-payment-pages" title="For Seamless and Hosted Payment Pages/Embedded Payment Pages" class="md-nav__link">
+    For Seamless and Hosted Payment Pages/Embedded Payment Pages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="signature-v2">Signature v2<a class="headerlink" href="#signature-v2" title="Permanent link">&para;</a></h1>
+<h2 id="authentication-by-signature"><strong>Authentication by Signature</strong><a class="headerlink" href="#authentication-by-signature" title="Permanent link">&para;</a></h2>
+<p>When a payment goes through, there's a lot of data to be exchanged between various endpoints. Payment information changes hands between your system (the merchant), the consumer's device, and our payment processing gateway (Elastic Engine). To ensure that this information is not tampered with, we need to put safeguards in place.</p>
+<p>We do this by employing a <em>digital signature</em>, which is used for all messages targeting the payment gateway. This signature is a mathematical cipher, which - if validated - proves that the message was created by a known sender and was not altered while being transmitted.</p>
+<h2 id="the-role-of-the-secret-key"><strong>The Role of the Secret Key</strong><a class="headerlink" href="#the-role-of-the-secret-key" title="Permanent link">&para;</a></h2>
+<p>You will use your Secret Key when generating the digital signature we just mentioned above.</p>
+<p>The Secret Key is only used in server-side code for either:</p>
+<ul>
+<li><em>generating</em> the server <em>request</em>  signature</li>
+<li><em>validating</em> the server <em>response</em> signature</li>
+</ul>
+<blockquote>
+<p><img alt="" src="https://s20.postimg.org/56vyof43x/person24.png" /> If you did not receive your Secret Key at the time you were setting up your merchant account with us, please contact your support representative and ask for Secret Key generation.</p>
+<p><img alt="" src="https://s20.postimg.org/5o8a1xj7x/padlock24.png" /> We ask you to <strong>never</strong> share your Secret Key with anyone, or store it inside your application or phone. This is crucial to ensure the security of your transactions. </p>
+</blockquote>
+<h2 id="format"><strong>Format</strong><a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
+<h3 id="for-mobile">For Mobile<a class="headerlink" href="#for-mobile" title="Permanent link">&para;</a></h3>
+<p>The signature is included the <code>Authorization</code> header of an HTTP request in the form of:
+- the authorization scheme (<code>WAUTH</code>),
+- and the signature.</p>
+<p> <div class=codehilite><pre><span></span>Authorization: WAUTH SFMyNTYKcmVxdWVzdF90aW1lX3N0YW1wPTIwMTYtMDctMjdUMTQ6MzM6NDkrMDI6MDAKbWVyY2hhbnRfYWNjb3VudF9pZD05ODczYWM2NS02ZjI4LTRiNzUtYWU1NS05ZDU0OWNmNTcwZTM.2VTPD7hAiCW-NdDaUqN7pjwizuwHvirVEs1HdGU-iz0
+</pre></div></p>
+<h3 id="for-seamless-and-hosted-payment-pagesembedded-payment-pages">For Seamless and Hosted Payment Pages/Embedded Payment Pages<a class="headerlink" href="#for-seamless-and-hosted-payment-pagesembedded-payment-pages" title="Permanent link">&para;</a></h3>
+<p>The signature is submitted client-side, as the variable of <code>request_signature_v2</code>, in the form of:</p>
+<ul>
+<li>the authorization scheme (<code>WAUTH</code>),</li>
+<li>and the signature.</li>
+</ul>
+<p> <div class=codehilite><pre><span></span>WAUTH SFMyNTYKcmVxdWVzdF90aW1lX3N0YW1wPTIwMTYtMDctMjdUMTQ6MzM6NDkrMDI6MDAKbWVyY2hhbnRfYWNjb3VudF9pZD05ODczYWM2NS02ZjI4LTRiNzUtYWU1NS05ZDU0OWNmNTcwZTM.2VTPD7hAiCW-NdDaUqN7pjwizuwHvirVEs1HdGU-iz0
+</pre></div></p>
+<h1 id="signature-verification">Signature Verification<a class="headerlink" href="#signature-verification" title="Permanent link">&para;</a></h1>
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_java checked=checked class=code-tab data-lang=java aria-controls=tab-group-2-0_java-panel role=tab><label for=tab-group-2-0_java class=code-tab-label data-lang=java id=tab-group-2-0_java-label>Java</label><div class=code-tabpanel role=tabpanel data-lang=java id=tab-group-2-0_java-panel aria-labelledby=tab-group-2-0_java-label><div class=codehilite><pre><span></span><span class=kn>import</span> <span class=nn>javax.crypto.Mac</span><span class=o>;</span>
+<span class=kn>import</span> <span class=nn>javax.crypto.spec.SecretKeySpec</span><span class=o>;</span>
+<span class=kn>import</span> <span class=nn>javax.xml.bind.DatatypeConverter</span><span class=o>;</span>
+
+<span class=o>...</span>
+
+<span class=kd>private</span> <span class=n>String</span> <span class=n>merchantSecretKey</span> <span class=o>=</span> <span class=s>&quot;merchantSecretKey&quot;</span><span class=o>;</span>
+
+<span class=kd>public</span> <span class=kt>boolean</span> <span class=nf>isValidSignature</span><span class=o>(</span><span class=n>String</span> <span class=n>responseBase64</span><span class=o>,</span> <span class=n>String</span> <span class=n>responseBase64Signature</span><span class=o>,</span> <span class=n>String</span> <span class=n>responseSignatureAlgorithm</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>Exception</span> <span class=o>{</span>
+    <span class=n>Mac</span> <span class=n>mac</span> <span class=o>=</span> <span class=n>Mac</span><span class=o>.</span><span class=na>getInstance</span><span class=o>(</span><span class=n>responseSignatureAlgorithm</span><span class=o>);</span>
+    <span class=n>mac</span><span class=o>.</span><span class=na>init</span><span class=o>(</span><span class=k>new</span> <span class=n>SecretKeySpec</span><span class=o>(</span><span class=n>merchantSecretKey</span><span class=o>.</span><span class=na>getBytes</span><span class=o>(</span><span class=s>&quot;UTF-8&quot;</span><span class=o>),</span> <span class=n>responseSignatureAlgorithm</span><span class=o>));</span>
+    <span class=k>return</span> <span class=n>responseBase64Signature</span> <span class=o>!=</span> <span class=kc>null</span> <span class=o>&amp;&amp;</span> <span class=n>responseBase64Signature</span><span class=o>.</span><span class=na>equals</span><span class=o>(</span><span class=n>DatatypeConverter</span><span class=o>.</span><span class=na>printBase64Binary</span><span class=o>(</span><span class=n>mac</span><span class=o>.</span><span class=na>doFinal</span><span class=o>(</span><span class=n>responseBase64</span><span class=o>.</span><span class=na>getBytes</span><span class=o>(</span><span class=s>&quot;UTF-8&quot;</span><span class=o>))));</span>
+<span class=o>}</span>
+</pre></div></div><input name=tab-group-2 type=radio id=tab-group-2-1_php class=code-tab data-lang=php aria-controls=tab-group-2-1_php-panel role=tab><label for=tab-group-2-1_php class=code-tab-label data-lang=php id=tab-group-2-1_php-label>Php</label><div class=code-tabpanel role=tabpanel data-lang=php id=tab-group-2-1_php-panel aria-labelledby=tab-group-2-1_php-label><div class=codehilite><pre><span></span><span class=cp>&lt;?php</span>
+
+<span class=sd>/**</span>
+<span class=sd> * @param string $responseBase64</span>
+<span class=sd> * @param string $signatureBase64</span>
+<span class=sd> * @return bool</span>
+<span class=sd> */</span>
+<span class=k>function</span> <span class=nf>isValidSignature</span><span class=p>(</span><span class=nv>$responseBase64</span><span class=p>,</span> <span class=nv>$signatureBase64</span><span class=p>,</span> <span class=nv>$merchantSecreyKey</span><span class=p>)</span>
+<span class=p>{</span>
+    <span class=nv>$signature</span> <span class=o>=</span> <span class=nb>hash_hmac</span><span class=p>(</span><span class=s1>&#39;sha256&#39;</span><span class=p>,</span> <span class=nb>base64_decode</span><span class=p>(</span><span class=nv>$responseBase64</span><span class=p>),</span> <span class=nv>$merchantSecreyKey</span><span class=p>);</span>
+    <span class=k>return</span> <span class=nx>hash_equals</span><span class=p>(</span><span class=nv>$signature</span><span class=p>,</span> <span class=nb>base64_decode</span><span class=p>(</span><span class=nv>$signatureBase64</span><span class=p>));</span>
+<span class=p>}</span>
+</pre></div></div><input name=tab-group-2 type=radio id=tab-group-2-2_csharp class=code-tab data-lang=csharp aria-controls=tab-group-2-2_csharp-panel role=tab><label for=tab-group-2-2_csharp class=code-tab-label data-lang=csharp id=tab-group-2-2_csharp-label>Csharp</label><div class=code-tabpanel role=tabpanel data-lang=csharp id=tab-group-2-2_csharp-panel aria-labelledby=tab-group-2-2_csharp-label><div class=codehilite><pre><span></span> <span class=k>using</span>
+  <span class=nn>System.Linq</span><span class=p>;</span>
+
+  <span class=k>using</span>
+  <span class=nn>System.Security.Cryptography</span><span class=p>;</span>
+
+  <span class=k>using</span>
+  <span class=nn>System.Text</span><span class=p>;</span>
+
+  <span class=err>…</span>        
+  <span class=n>String</span> <span class=n>merchantSecretKey</span> <span class=p>=</span> <span class=s>&quot;key&quot;</span><span class=p>;</span>
+
+  <span class=n>Boolean</span> <span class=nf>isValidSignature</span><span class=p>(</span><span class=n>String</span> <span class=n>responseBase64</span><span class=p>,</span> <span class=n>String</span> <span class=n>signatureBase64</span><span class=p>,</span>
+  <span class=n>String</span> <span class=n>responseSignatureAlgorithm</span><span class=p>)</span>
+
+<span class=p>{</span>            
+  <span class=k>if</span> <span class=p>(</span><span class=n>responseBase64</span> <span class=p>==</span> <span class=k>null</span> <span class=p>||</span> <span class=n>signatureBase64</span> <span class=p>==</span> <span class=k>null</span> <span class=p>||</span> <span class=n>responseSignatureAlgorithm</span> <span class=p>==</span> <span class=k>null</span><span class=p>)</span>            
+  <span class=p>{</span>                
+    <span class=k>return</span> <span class=k>false</span><span class=p>;</span>            
+<span class=p>}</span>
+
+  <span class=kt>byte</span><span class=p>[]</span> <span class=n>response</span> <span class=p>=</span> <span class=n>Convert</span><span class=p>.</span><span class=n>FromBase64String</span><span class=p>(</span><span class=n>responseBase64</span><span class=p>);</span>            
+  <span class=kt>byte</span><span class=p>[]</span> <span class=n>expectedSignature</span> <span class=p>=</span> <span class=n>Convert</span><span class=p>.</span><span class=n>FromBase64String</span><span class=p>(</span><span class=n>signatureBase64</span><span class=p>);</span> 
+
+  <span class=n>KeyedHashAlgorithm</span> <span class=n>algorithm</span> <span class=p>=</span><span class=n>KeyedHashAlgorithm</span><span class=p>.</span><span class=n>Create</span><span class=p>(</span><span class=n>responseSignatureAlgorithm</span><span class=p>);</span>            
+  <span class=n>algorithm</span><span class=p>.</span><span class=n>Key</span> <span class=p>=</span> <span class=n>Encoding</span><span class=p>.</span><span class=n>UTF8</span><span class=p>.</span><span class=n>GetBytes</span><span class=p>(</span><span class=n>merchantSecretKey</span><span class=p>);</span>            
+  <span class=n>algorithm</span><span class=p>.</span><span class=n>Initialize</span><span class=p>();</span>
+
+  <span class=kt>byte</span><span class=p>[]</span> <span class=n>computedSignature</span> <span class=p>=</span> <span class=n>algorithm</span><span class=p>.</span><span class=n>ComputeHash</span><span class=p>(</span><span class=n>response</span><span class=p>);</span>            
+  <span class=n>Boolean</span> <span class=n>result</span> <span class=p>=</span> <span class=n>computedSignature</span><span class=p>.</span><span class=n>SequenceEqual</span><span class=p>(</span><span class=n>expectedSignature</span><span class=p>);</span>            
+  <span class=k>return</span> <span class=n>result</span><span class=p>;</span>        
+<span class=p>}</span>
+</pre></div></div></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../iOS/" title="iOS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                iOS
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../tabtest/" title="Tabs Test" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tabs Test
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright placeholder
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/wirecard" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+        <script src="../js/tabhack.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

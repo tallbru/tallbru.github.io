@@ -3,24 +3,40 @@
 
     
     <url>
-     <loc>/</loc>
-     <lastmod>2018-05-31</lastmod>
+     <loc>http://tallbru.github.io/</loc>
+     <lastmod>2018-06-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/android/</loc>
-     <lastmod>2018-05-31</lastmod>
+     <loc>http://tallbru.github.io/android/</loc>
+     <lastmod>2018-06-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/iOS/</loc>
-     <lastmod>2018-05-31</lastmod>
+     <loc>http://tallbru.github.io/iOS/</loc>
+     <lastmod>2018-06-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>http://tallbru.github.io/sigv2/</loc>
+     <lastmod>2018-06-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>http://tallbru.github.io/tabtest/</loc>
+     <lastmod>2018-06-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

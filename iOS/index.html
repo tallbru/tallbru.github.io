@@ -13,6 +13,8 @@
         <meta name="description" content="A lightweight user interface for Wirecard Payment Gateway">
       
       
+        <link rel="canonical" href="http://tallbru.github.io/iOS/">
+      
       
         <meta name="author" content="paymentSDK Team">
       
@@ -61,6 +63,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
+      <link rel="stylesheet" href="../css/code-tabs.css">
+    
     
   </head>
   
@@ -87,7 +91,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Mobile paymentSDK" class="md-header-nav__button md-logo">
+        <a href="http://tallbru.github.io" title="Mobile paymentSDK" class="md-header-nav__button md-logo">
           
             <i class="md-icon">developer_mode</i>
           
@@ -309,6 +313,30 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sigv2/" title="Signature v2" class="md-nav__link">
+      Signature v2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tabtest/" title="Tabs Test" class="md-nav__link">
+      Tabs Test
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -425,10 +453,8 @@
 </blockquote>
 <h2 id="getting-paymentsdk">Getting paymentSDK<a class="headerlink" href="#getting-paymentsdk" title="Permanent link">&para;</a></h2>
 <p>Download the pod at our <a href="https://github.com/wirecard/paymentSDK-iOS">GitHub repository</a> and add it to your <em>Podfile</em>:</p>
-<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="err">&#39;</span><span class="n">paymentSDK</span><span class="err">&#39;</span>
-</pre></div>
-
-
+<p> <div class=codehilite><pre><span></span><span class=n>pod</span> <span class=err>&#39;</span><span class=n>paymentSDK</span><span class=err>&#39;</span>
+</pre></div></p>
 <h3 id="external-libraries">External Libraries<a class="headerlink" href="#external-libraries" title="Permanent link">&para;</a></h3>
 <h2 id="code-examples">Code Examples<a class="headerlink" href="#code-examples" title="Permanent link">&para;</a></h2>
 <p>In this section, you will find code examples of basic transactions for each payment method.</p>
@@ -463,13 +489,13 @@
 <ol>
 <li>Initialize <code>WDClient</code>:</li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">paymentAuthorizationViewController:</span><span class="p">(</span><span class="bp">PKPaymentAuthorizationViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">controller</span>
-                       <span class="nf">didAuthorizePayment:</span><span class="p">(</span><span class="bp">PKPayment</span> <span class="o">*</span><span class="p">)</span><span class="nv">payment</span>
-                                <span class="nf">completion:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">PKPaymentAuthorizationStatus</span> <span class="n">status</span><span class="p">))</span><span class="nv">completion</span>
-<span class="p">{</span>
-    <span class="c1">// it is better to keep client as property to keep reference</span>
-    <span class="n">WDClient</span> <span class="o">*</span><span class="n">client</span> <span class="o">=</span> <span class="p">[[</span><span class="n">WDClient</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithEnvironment</span><span class="p">:</span><span class="n">WDEnvironmentTEST</span><span class="p">];</span>
-</pre></div>
+<p> <div class=codehilite><pre><span></span><span class=p>-</span> <span class=p>(</span><span class=kt>void</span><span class=p>)</span><span class=nf>paymentAuthorizationViewController:</span><span class=p>(</span><span class=bp>PKPaymentAuthorizationViewController</span> <span class=o>*</span><span class=p>)</span><span class=nv>controller</span>
+                       <span class=nf>didAuthorizePayment:</span><span class=p>(</span><span class=bp>PKPayment</span> <span class=o>*</span><span class=p>)</span><span class=nv>payment</span>
+                                <span class=nf>completion:</span><span class=p>(</span><span class=kt>void</span> <span class=p>(</span><span class=o>^</span><span class=p>)(</span><span class=n>PKPaymentAuthorizationStatus</span> <span class=n>status</span><span class=p>))</span><span class=nv>completion</span>
+<span class=p>{</span>
+    <span class=c1>// it is better to keep client as property to keep reference</span>
+    <span class=n>WDClient</span> <span class=o>*</span><span class=n>client</span> <span class=o>=</span> <span class=p>[[</span><span class=n>WDClient</span> <span class=n>alloc</span><span class=p>]</span> <span class=nl>initWithEnvironment</span><span class=p>:</span><span class=n>WDEnvironmentTEST</span><span class=p>];</span>
+</pre></div></p>
                 
                   
                 
@@ -504,6 +530,20 @@
             </div>
           </a>
         
+        
+          <a href="../sigv2/" title="Signature v2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Signature v2
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
@@ -542,6 +582,8 @@
       <script src="../assets/javascripts/application.b438e6c5.js"></script>
       
       <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+        <script src="../js/tabhack.js"></script>
       
     
     

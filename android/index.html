@@ -13,6 +13,8 @@
         <meta name="description" content="A lightweight user interface for Wirecard Payment Gateway">
       
       
+        <link rel="canonical" href="http://tallbru.github.io/android/">
+      
       
         <meta name="author" content="paymentSDK Team">
       
@@ -61,6 +63,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
+      <link rel="stylesheet" href="../css/code-tabs.css">
+    
     
   </head>
   
@@ -87,7 +91,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Mobile paymentSDK" class="md-header-nav__button md-logo">
+        <a href="http://tallbru.github.io" title="Mobile paymentSDK" class="md-header-nav__button md-logo">
           
             <i class="md-icon">developer_mode</i>
           
@@ -343,6 +347,30 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sigv2/" title="Signature v2" class="md-nav__link">
+      Signature v2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tabtest/" title="Tabs Test" class="md-nav__link">
+      Tabs Test
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -497,38 +525,32 @@
 <h4 id="a-using-a-dependency-manager">a) Using a Dependency Manager<a class="headerlink" href="#a-using-a-dependency-manager" title="Permanent link">&para;</a></h4>
 <p>With this option, you will be getting paymentSDK straight from the repository using <a href="https://jitpack.io/">JitPack</a>.</p>
 <p>First of all, you need to have created your project already in the Android studio. Then you simply add the following code to your <em>build.gradle</em> file:</p>
-<div class="codehilite"><pre><span></span> repositories {
+<p> <div class=codehilite><pre><span></span> repositories {
      maven { url &quot;https://jitpack.io&quot; }
  }
  dependencies {
      compile &#39;com.github.wirecard:paymentSDK-Android:2.7.1&#39;
  }
-</pre></div>
-
-
+</pre></div></p>
 <p>Some of our customers prefer an alternative version of paymentSDK, one which does not feature the card scanner capability (i.e. scanning the card information using the phone's camera).</p>
 <p>If that's you, add this dependency instead:</p>
-<div class="codehilite"><pre><span></span> dependencies {
+<p> <div class=codehilite><pre><span></span> dependencies {
     compile &#39;com.github.wirecard:paymentSDK-Android:2.7.1-cardScannerDisabled&#39;
  }
-</pre></div>
-
-
+</pre></div></p>
 <h4 id="b-importing-through-android-studio">b) Importing Through Android Studio<a class="headerlink" href="#b-importing-through-android-studio" title="Permanent link">&para;</a></h4>
 <p>After you download the paymentSDK package from <a href="https://github.com/wirecard/paymentSDK-Android">our GitHub repository</a>, simply use the Android Studio's <em>Import .JAR/.AAR Package</em> option located in File -&gt; New -&gt; New Module.</p>
 <p>Then, add the paymentSDK module as a dependency to your <em>build.gradle</em> file as shown in the example:</p>
-<div class="codehilite"><pre><span></span> dependencies {
+<p> <div class=codehilite><pre><span></span> dependencies {
    ...
    compile project(&#39;:paymentsdk&#39;)
    ...
  }
-</pre></div>
-
-
+</pre></div></p>
 <hr />
 <h3 id="external-libraries-other">External Libraries &amp; Other<a class="headerlink" href="#external-libraries-other" title="Permanent link">&para;</a></h3>
 <p>Our SDK uses various 3rd party libraries which you will need to include in your <em>build.gradle</em> file. These should be kept at their latest stable versions:</p>
-<div class="codehilite"><pre><span></span> dependencies {
+<p> <div class=codehilite><pre><span></span> dependencies {
        ...
        compile &#39;com.android.support:appcompat-v7:25.3.1&#39;
        compile &#39;com.squareup.retrofit2:retrofit:2.1.0&#39;
@@ -542,41 +564,33 @@
  compile &#39;io.card:android-sdk:5.5.1&#39; 
        ...
  }
-</pre></div>
-
-
+</pre></div></p>
 <blockquote>
 <p><img alt="" src="https://s20.postimg.org/mksax8kgd/bulb24.png" /> Including <strong><em>io.card:android-sdk</em></strong>  is optional when using the alternative paymentSDK version (without the card scanner feature).</p>
 <p>It is important that you adjust <code>com.android.support:appcompat</code> to the latest version of the support library.</p>
 </blockquote>
 <h4 id="androidmanifest-setup"><em>AndroidManifest</em> Setup<a class="headerlink" href="#androidmanifest-setup" title="Permanent link">&para;</a></h4>
 <p>paymentSDK  requires these permissions to function:</p>
-<div class="codehilite"><pre><span></span>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+<p> <div class=codehilite><pre><span></span>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
  &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;
-</pre></div>
-
-
+</pre></div></p>
 <p>If you plan on using the card scanner feature, you will need to:</p>
 <ul>
 <li>add these permissions:</li>
 </ul>
-<div class="codehilite"><pre><span></span>&lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot; /&gt;
+<p> <div class=codehilite><pre><span></span>&lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot; /&gt;
 &lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt; 
-</pre></div>
-
-
+</pre></div></p>
 <ul>
 <li>add this activity into your <em>AndroidManifest</em> file:</li>
 </ul>
-<div class="codehilite"><pre><span></span>&lt;activity
+<p> <div class=codehilite><pre><span></span>&lt;activity
     android:name=&quot;de.wirecard.paymentsdk.ui.activity.CardScannerActivity&quot; /&gt; 
-</pre></div>
-
-
+</pre></div></p>
 <p>Again, if you do not require the card scanner capability in your app, you can safely omit this step. </p>
 <h4 id="proguard">Proguard<a class="headerlink" href="#proguard" title="Permanent link">&para;</a></h4>
 <p>If you are using <a href="https://www.guardsquare.com/en/proguard">Proguard</a>, you will need to add the following rules into your <em>proguard-rules.pro</em> file:</p>
-<div class="codehilite"><pre><span></span> -dontwarn org.simpleframework.**
+<p> <div class=codehilite><pre><span></span> -dontwarn org.simpleframework.**
  -dontwarn io.card.**
  -dontwarn okhttp3.**
  -dontwarn okio.**
@@ -607,13 +621,11 @@
  -keep interface de.wirecard.paymentsdk.** { *; }
  ```
   Again, if you are using the alternative version without the card scanner feature, you can leave out this part:
-</pre></div>
-
-
+</pre></div></p>
 <p>-keep class io.card.<strong>
  -keepclassmembers class io.card.</strong> {
       *;</p>
-<div class="codehilite"><pre><span></span>---
+<p> <div class=codehilite><pre><span></span>---
 
 ## Code Examples
 
@@ -632,9 +644,7 @@ try {
 } catch (WirecardException exception) {
     //device is rooted
 }
-</pre></div>
-
-
+</pre></div></p>
 <p>The example above also handles the "device is rooted" exception situation by using <code>try</code> and <code>catch</code>.</p>
 <hr />
 <h3 id="1-card-payment">1. Card Payment<a class="headerlink" href="#1-card-payment" title="Permanent link">&para;</a></h3>
@@ -646,53 +656,47 @@ try {
 <ol>
 <li>Create and initialize the  <code>WirecardCardPayment</code> object, which stores the transaction's payload &amp; signature:</li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="n">WirecardCardPayment</span> <span class="n">wirecardCardPayment</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WirecardCardPayment</span><span class="o">(</span><span class="n">timestamp</span><span class="o">,</span> <span class="n">requestID</span><span class="o">,</span> <span class="n">merchantID</span><span class="o">,</span> <span class="n">transactionType</span><span class="o">,</span> <span class="n">amount</span><span class="o">,</span> <span class="n">currency</span><span class="o">,</span> <span class="n">signature</span><span class="o">);</span>
-</pre></div>
-
-
+<p> <div class=codehilite><pre><span></span><span class=n>WirecardCardPayment</span> <span class=n>wirecardCardPayment</span> <span class=o>=</span> <span class=k>new</span> <span class=n>WirecardCardPayment</span><span class=o>(</span><span class=n>timestamp</span><span class=o>,</span> <span class=n>requestID</span><span class=o>,</span> <span class=n>merchantID</span><span class=o>,</span> <span class=n>transactionType</span><span class=o>,</span> <span class=n>amount</span><span class=o>,</span> <span class=n>currency</span><span class=o>,</span> <span class=n>signature</span><span class=o>);</span>
+</pre></div></p>
 <ol>
 <li>Initialize the <code>WirecardResponseListener</code> object, which stores callback methods that will let you know the result of the transaction, or any errors, should they occur.</li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="n">WirecardResponseListener</span> <span class="n">wirecardResponseListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WirecardResponseListener</span><span class="o">()</span> <span class="o">{</span>
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResponse</span><span class="o">(</span><span class="n">WirecardPaymentResponse</span> <span class="n">paymentResponse</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// handle server response</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">paymentResponse</span><span class="o">.</span><span class="na">getTransactionState</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">TransactionState</span><span class="o">.</span><span class="na">SUCCESS</span><span class="o">))</span> <span class="o">{</span>
-            <span class="c1">// handle successful transaction</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="c1">// handle unsuccessful transaction</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="o">(</span><span class="n">WirecardResponseError</span> <span class="n">responseError</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// handle error</span>
-        <span class="k">switch</span> <span class="o">(</span><span class="n">responseError</span><span class="o">.</span><span class="na">getErrorCode</span><span class="o">())</span> <span class="o">{</span>
-            <span class="k">case</span> <span class="n">WirecardErrorCode</span><span class="o">.</span><span class="na">ERROR_CODE_GENERAL</span><span class="o">:</span>
-                <span class="n">String</span> <span class="n">detailedMessage</span> <span class="o">=</span> <span class="n">responseError</span><span class="o">.</span><span class="na">getErrorMessage</span><span class="o">();</span>
-                <span class="c1">//...</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="k">case</span> <span class="n">WirecardErrorCode</span><span class="o">.</span><span class="na">ERROR_CODE_INVALID_PAYMENT_DATA</span><span class="o">:</span>
-                <span class="c1">//...</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="k">case</span> <span class="n">WirecardErrorCode</span><span class="o">.</span><span class="na">ERROR_CODE_NETWORK_ISSUE</span><span class="o">:</span>
-                <span class="c1">//...</span>
-                <span class="k">break</span><span class="o">;</span>
-            <span class="k">case</span> <span class="n">WirecardErrorCode</span><span class="o">.</span><span class="na">ERROR_CODE_USER_CANCELED</span><span class="o">:</span>
-                <span class="c1">//...</span>
-                <span class="k">break</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">};</span>
-</pre></div>
-
-
+<p> <div class=codehilite><pre><span></span><span class=n>WirecardResponseListener</span> <span class=n>wirecardResponseListener</span> <span class=o>=</span> <span class=k>new</span> <span class=n>WirecardResponseListener</span><span class=o>()</span> <span class=o>{</span>
+    <span class=nd>@Override</span>
+    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>onResponse</span><span class=o>(</span><span class=n>WirecardPaymentResponse</span> <span class=n>paymentResponse</span><span class=o>)</span> <span class=o>{</span>
+        <span class=c1>// handle server response</span>
+        <span class=k>if</span> <span class=o>(</span><span class=n>paymentResponse</span><span class=o>.</span><span class=na>getTransactionState</span><span class=o>().</span><span class=na>equals</span><span class=o>(</span><span class=n>TransactionState</span><span class=o>.</span><span class=na>SUCCESS</span><span class=o>))</span> <span class=o>{</span>
+            <span class=c1>// handle successful transaction</span>
+        <span class=o>}</span> <span class=k>else</span> <span class=o>{</span>
+            <span class=c1>// handle unsuccessful transaction</span>
+        <span class=o>}</span>
+    <span class=o>}</span>
+    <span class=nd>@Override</span>
+    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>onError</span><span class=o>(</span><span class=n>WirecardResponseError</span> <span class=n>responseError</span><span class=o>)</span> <span class=o>{</span>
+        <span class=c1>// handle error</span>
+        <span class=k>switch</span> <span class=o>(</span><span class=n>responseError</span><span class=o>.</span><span class=na>getErrorCode</span><span class=o>())</span> <span class=o>{</span>
+            <span class=k>case</span> <span class=n>WirecardErrorCode</span><span class=o>.</span><span class=na>ERROR_CODE_GENERAL</span><span class=o>:</span>
+                <span class=n>String</span> <span class=n>detailedMessage</span> <span class=o>=</span> <span class=n>responseError</span><span class=o>.</span><span class=na>getErrorMessage</span><span class=o>();</span>
+                <span class=c1>//...</span>
+                <span class=k>break</span><span class=o>;</span>
+            <span class=k>case</span> <span class=n>WirecardErrorCode</span><span class=o>.</span><span class=na>ERROR_CODE_INVALID_PAYMENT_DATA</span><span class=o>:</span>
+                <span class=c1>//...</span>
+                <span class=k>break</span><span class=o>;</span>
+            <span class=k>case</span> <span class=n>WirecardErrorCode</span><span class=o>.</span><span class=na>ERROR_CODE_NETWORK_ISSUE</span><span class=o>:</span>
+                <span class=c1>//...</span>
+                <span class=k>break</span><span class=o>;</span>
+            <span class=k>case</span> <span class=n>WirecardErrorCode</span><span class=o>.</span><span class=na>ERROR_CODE_USER_CANCELED</span><span class=o>:</span>
+                <span class=c1>//...</span>
+                <span class=k>break</span><span class=o>;</span>
+        <span class=o>}</span>
+    <span class=o>}</span>
+<span class=o>};</span>
+</pre></div></p>
 <ol>
 <li>To send the transaction request, call the <em><code>WirecardClient</code></em>'s method <code>makePayment</code> to send the transaction request:</li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="n">wirecardClient</span><span class="o">.</span><span class="na">makePayment</span><span class="o">(</span><span class="n">wirecardCardPayment</span><span class="o">,</span> <span class="n">wirecardResponseListener</span><span class="o">,</span> <span class="n">paymentPageStyle</span><span class="o">);</span>
-</pre></div>
-
-
+<p> <div class=codehilite><pre><span></span><span class=n>wirecardClient</span><span class=o>.</span><span class=na>makePayment</span><span class=o>(</span><span class=n>wirecardCardPayment</span><span class=o>,</span> <span class=n>wirecardResponseListener</span><span class=o>,</span> <span class=n>paymentPageStyle</span><span class=o>);</span>
+</pre></div></p>
 <blockquote>
 <p><img alt="" src="https://s20.postimg.org/gax1a8l1p/book24.png" /> You can customize the UI through resources of the <code>paymentPageStyle</code> object. We will revisit the 'how' at the end of this section.</p>
 </blockquote>
@@ -701,14 +705,12 @@ try {
 </ol>
 <h5 id="referenced-transactions">Referenced Transactions<a class="headerlink" href="#referenced-transactions" title="Permanent link">&para;</a></h5>
 <p>If you need to perform referenced transactions (i.e. one's using a <em>token</em> or <em>parentTransactionID</em>), simply set then into the <code>wirecardCardPayment</code> instance:</p>
-<div class="codehilite"><pre><span></span><span class="n">wirecardPayment</span><span class="o">.</span><span class="na">setParentTransactionID</span><span class="o">(</span><span class="n">parentTransactionID</span><span class="o">);</span>
-</pre></div>
-
-
+<p> <div class=codehilite><pre><span></span><span class=n>wirecardPayment</span><span class=o>.</span><span class=na>setParentTransactionID</span><span class=o>(</span><span class=n>parentTransactionID</span><span class=o>);</span>
+</pre></div></p>
 <p>OR</p>
-<div class="codehilite"><pre><span></span><span class="n">CardToken</span> <span class="n">cardToken</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CardToken</span><span class="o">(</span><span class="n">tokenID</span><span class="o">,</span> <span class="n">maskedAccountNumber</span><span class="o">);</span>
-<span class="n">wirecardPayment</span><span class="o">.</span><span class="na">setCardToken</span><span class="o">(</span><span class="n">cardToken</span><span class="o">);</span>
-</pre></div>
+<p> <div class=codehilite><pre><span></span><span class=n>CardToken</span> <span class=n>cardToken</span> <span class=o>=</span> <span class=k>new</span> <span class=n>CardToken</span><span class=o>(</span><span class=n>tokenID</span><span class=o>,</span> <span class=n>maskedAccountNumber</span><span class=o>);</span>
+<span class=n>wirecardPayment</span><span class=o>.</span><span class=na>setCardToken</span><span class=o>(</span><span class=n>cardToken</span><span class=o>);</span>
+</pre></div></p>
                 
                   
                 
@@ -795,6 +797,8 @@ try {
       <script src="../assets/javascripts/application.b438e6c5.js"></script>
       
       <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+        <script src="../js/tabhack.js"></script>
       
     
     
