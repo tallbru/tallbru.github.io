@@ -206,29 +206,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-payment-methods" title="A. Payment Methods" class="md-nav__link">
-    A. Payment Methods
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-security" title="B. Security" class="md-nav__link">
-    B. Security
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-first-steps" title="1. First steps" class="md-nav__link">
-    1. First steps
+  <a href="#first-steps" title="First Steps" class="md-nav__link">
+    First Steps
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#available-payment-methods" title="Available Payment Methods" class="md-nav__link">
+    Available Payment Methods
+  </a>
   
 </li>
       
@@ -240,30 +234,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="android/" title="Android" class="md-nav__link">
-      Android
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="iOS/" title="iOS" class="md-nav__link">
-      iOS
-    </a>
   </li>
 
     
@@ -324,29 +294,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-payment-methods" title="A. Payment Methods" class="md-nav__link">
-    A. Payment Methods
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#b-security" title="B. Security" class="md-nav__link">
-    B. Security
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-first-steps" title="1. First steps" class="md-nav__link">
-    1. First steps
+  <a href="#first-steps" title="First Steps" class="md-nav__link">
+    First Steps
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#available-payment-methods" title="Available Payment Methods" class="md-nav__link">
+    Available Payment Methods
+  </a>
   
 </li>
       
@@ -368,33 +332,129 @@
                 
                 
                 <h1 id="mobile-paymentsdk">Mobile paymentSDK<a class="headerlink" href="#mobile-paymentsdk" title="Permanent link">&para;</a></h1>
-<hr />
-<p>Welcome to the documentation for Mobile paymentSDK, a lightweight user interface for the Elastic Engine payment gateway.</p>
-<p>Here, we will try to give you a solid overview of features, options, and code examples you can use as a guide for your own integration of paymentSDK into your app.</p>
-<p>You do not need to be a coding genius to make sense of this documentation (or paymentSDK itself), but we assume that you are familiar with the basics of programming, computers, and your platform of choice (iOS/Android). </p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Mobile paymentSDK (MPSDK) is a lightweight user interface for the Wirecard Payment Gateway. MPSDK offers a seamless user experience by rendering a payment form as if it's built in the merchant’s mobile application. </p>
+<p>This documentation was written for developers who will be integrating MPSDK into their mobile application. On this page, you will find general information you need to get started. </p>
+<p>For integration docs, refer to the subpage Basic Setup and Integration.</p>
 <blockquote>
-<p><img alt="" src="https://s20.postimg.org/56vyof43x/person24.png" /> If you feel like something is missing, or you find errors, please do contact us @TBA</p>
+<p>If you feel like something is missing, or you find errors, contact Sedlak, Stefan or Tall, Bruno</p>
 </blockquote>
-<h2 id="a-payment-methods">A. Payment Methods<a class="headerlink" href="#a-payment-methods" title="Permanent link">&para;</a></h2>
-<hr />
-<p>You can find a list of available payment methods, along with the supported transaction types, at this <a href="https://confluence.wirecard.sys/display/MPSDK/Payment+Methods"><strong>link</strong></a>. </p>
-<p>The transaction types which are <strong>not</strong> printed in bold are not supported (nor recommended) to be implemented as a part of Mobile paymentSDK because of the inherent security risks &amp; limitations of the mobile platform.</p>
-<h2 id="b-security">B. Security<a class="headerlink" href="#b-security" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="1-first-steps">1. First steps<a class="headerlink" href="#1-first-steps" title="Permanent link">&para;</a></h3>
+<p>A list of the currently supported payment methods can be found in Available Payment Methods below.</p>
+<h2 id="first-steps">First Steps<a class="headerlink" href="#first-steps" title="Permanent link">&para;</a></h2>
 <p>Before you start coding, you are going to need some credentials:</p>
 <ol>
-<li>Merchant Account ID -  the ID of your merchant account that will be used to process transactions</li>
+<li>Merchant Account ID - the ID of your merchant account that will be used to process transactions</li>
 <li>Secret Key - a value that you will use to create unique security signatures for your transactions</li>
 </ol>
 <blockquote>
-<p><img alt="" src="https://s20.postimg.org/mksax8kgd/bulb24.png" /> You can find testing credentials at <a href="https://confluence.wirecard.sys/display/PTD/Appendix+K%3A+Test+Access+Data+and+Credentials"><strong>this</strong></a> link.</p>
+<p>You can find testing credentials at this link.
+Your account needs to be configured to process payments triggered by mobile SDKs through Merchant Support. </p>
 </blockquote>
-<p>Next, depending on where you are from, choose your closest production environment; this is where your instance of paymentSDK will be hosted. Both testing and production environments are available in every location. At the moment, these are the supported locations:</p>
-<p><strong>Germany</strong> |
-<strong>Singapore</strong> |
-<strong>Toronto</strong></p>
-<script src="https://gist.github.com/tallbru/b48f27f1ea54139ca01d00ac960048b4.js"></script>
+<p>Your own credentials are acquired by contacting Merchant Support.</p>
+<p>Next, depending on where you are from, you will need to choose your closest production environment: this is where your instance of MPSDK will be hosted. Both testing and production environments are available in every location.</p>
+<p>At the moment, the supported locations are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Location / Name</th>
+<th>Hostname</th>
+<th>SSL cert valid until</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Germany - PROD</td>
+<td>api.wirecard.com</td>
+<td>05/05/2018</td>
+</tr>
+<tr>
+<td>Germany - TEST</td>
+<td>api-test.wirecard.com</td>
+<td>05/05/2018</td>
+</tr>
+<tr>
+<td>Singapore - PROD</td>
+<td>api.wirecard.com.sg</td>
+<td>05/21/2020</td>
+</tr>
+<tr>
+<td>Singapore - TEST</td>
+<td>test.wirecard.com.sg</td>
+<td>09/04/2020</td>
+</tr>
+<tr>
+<td>Toronto - PROD</td>
+<td>engine.elastic-payments.com</td>
+<td>08/27/2018</td>
+</tr>
+<tr>
+<td>Toronto - TEST</td>
+<td>sandbox-engine.thesolution.com</td>
+<td>12/01/2018</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Don't forget to keep MPSDK up-to-date (updating before the SSL certification expires especially).</p>
+</blockquote>
+<h2 id="available-payment-methods">Available Payment Methods<a class="headerlink" href="#available-payment-methods" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>We recommend using IPNs, instead of the default MPSDK responses, as they are much more reliable</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Payment Method</th>
+<th>Transaction Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apple Pay</td>
+<td>authorization</td>
+</tr>
+<tr>
+<td></td>
+<td>purchase</td>
+</tr>
+<tr>
+<td>Card</td>
+<td>authorization</td>
+</tr>
+<tr>
+<td></td>
+<td>authorization-only</td>
+</tr>
+<tr>
+<td></td>
+<td>purchase</td>
+</tr>
+<tr>
+<td></td>
+<td>tokenize</td>
+</tr>
+<tr>
+<td>PayPal</td>
+<td>authorization</td>
+</tr>
+<tr>
+<td></td>
+<td>authorization-only</td>
+</tr>
+<tr>
+<td></td>
+<td>debit</td>
+</tr>
+<tr>
+<td>SEPA Direct Debit</td>
+<td>authorization</td>
+</tr>
+<tr>
+<td></td>
+<td>pending-debit</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -416,13 +476,13 @@
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="android/" title="Android" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="tabtest/" title="Tabs Test" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Android
+                Tabs Test
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
