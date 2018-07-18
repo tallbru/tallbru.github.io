@@ -341,16 +341,19 @@
 <p>A line consisting of 0-3 spaces of indentation, followed by a sequence of three or more matching <code>-</code>, <code>_</code>, or <code>*</code>, each followed optionally by any number of spaces, forms a <em>thematic break</em>.</p>
 <hr />
 <p>This is an indented code block:</p>
-<div class="codehilite"><pre><span></span>var text = &quot;text&quot;;
-function doNothing() {
-  return;
-}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&quot;text&quot;</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">doNothing() {</span>
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Fenced code blocks support syntax highlighting for most of the popular programming languages:</p>
-<p> <div class=codehilite><pre><span></span><span class=kd>var</span> <span class=nx>text</span> <span class=o>=</span> <span class=s2>&quot;text&quot;</span><span class=p>;</span> <span class=c1>// variable definition</span>
-</pre></div></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=kd>var</span> <span class=nx>text</span> <span class=o>=</span> <span class=s2>&quot;text&quot;</span><span class=p>;</span> <span class=c1>// variable definition</span>
+</pre></div></td></tr></table></p>
 <p>HTML block:</p>
 <div style='background: #eea; padding: 10px 15px;'>
   This will appear as a block of with a yellow background.

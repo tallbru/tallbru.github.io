@@ -405,18 +405,30 @@
 <p>The signature is included the <code>Authorization</code> header of an HTTP request in the form of:
 - the authorization scheme (<code>WAUTH</code>),
 - and the signature.</p>
-<p> <div class=codehilite><pre><span></span>Authorization: WAUTH SFMyNTYKcmVxdWVzdF90aW1lX3N0YW1wPTIwMTYtMDctMjdUMTQ6MzM6NDkrMDI6MDAKbWVyY2hhbnRfYWNjb3VudF9pZD05ODczYWM2NS02ZjI4LTRiNzUtYWU1NS05ZDU0OWNmNTcwZTM.2VTPD7hAiCW-NdDaUqN7pjwizuwHvirVEs1HdGU-iz0
-</pre></div></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>Authorization: WAUTH SFMyNTYKcmVxdWVzdF90aW1lX3N0YW1wPTIwMTYtMDctMjdUMTQ6MzM6NDkrMDI6MDAKbWVyY2hhbnRfYWNjb3VudF9pZD05ODczYWM2NS02ZjI4LTRiNzUtYWU1NS05ZDU0OWNmNTcwZTM.2VTPD7hAiCW-NdDaUqN7pjwizuwHvirVEs1HdGU-iz0
+</pre></div></td></tr></table></p>
 <h3 id="for-seamless-and-hosted-payment-pagesembedded-payment-pages">For Seamless and Hosted Payment Pages/Embedded Payment Pages<a class="headerlink" href="#for-seamless-and-hosted-payment-pagesembedded-payment-pages" title="Permanent link">&para;</a></h3>
 <p>The signature is submitted client-side, as the variable of <code>request_signature_v2</code>, in the form of:</p>
 <ul>
 <li>the authorization scheme (<code>WAUTH</code>),</li>
 <li>and the signature.</li>
 </ul>
-<p> <div class=codehilite><pre><span></span>WAUTH SFMyNTYKcmVxdWVzdF90aW1lX3N0YW1wPTIwMTYtMDctMjdUMTQ6MzM6NDkrMDI6MDAKbWVyY2hhbnRfYWNjb3VudF9pZD05ODczYWM2NS02ZjI4LTRiNzUtYWU1NS05ZDU0OWNmNTcwZTM.2VTPD7hAiCW-NdDaUqN7pjwizuwHvirVEs1HdGU-iz0
-</pre></div></p>
+<p> <table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre>1</pre></div></td><td class=code><div class=codehilite><pre><span></span>WAUTH SFMyNTYKcmVxdWVzdF90aW1lX3N0YW1wPTIwMTYtMDctMjdUMTQ6MzM6NDkrMDI6MDAKbWVyY2hhbnRfYWNjb3VudF9pZD05ODczYWM2NS02ZjI4LTRiNzUtYWU1NS05ZDU0OWNmNTcwZTM.2VTPD7hAiCW-NdDaUqN7pjwizuwHvirVEs1HdGU-iz0
+</pre></div></td></tr></table></p>
 <h2 id="signature-verification">Signature Verification<a class="headerlink" href="#signature-verification" title="Permanent link">&para;</a></h2>
-<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_java checked=checked class=code-tab data-lang=java aria-controls=tab-group-2-0_java-panel role=tab><label for=tab-group-2-0_java class=code-tab-label data-lang=java id=tab-group-2-0_java-label>Java</label><div class=code-tabpanel role=tabpanel data-lang=java id=tab-group-2-0_java-panel aria-labelledby=tab-group-2-0_java-label><div class=codehilite><pre><span></span><span class=kn>import</span> <span class=nn>javax.crypto.Mac</span><span class=o>;</span>
+<div class=md-fenced-code-tabs id=tab-tab-group-2><input name=tab-group-2 type=radio id=tab-group-2-0_java checked=checked class=code-tab data-lang=java aria-controls=tab-group-2-0_java-panel role=tab><label for=tab-group-2-0_java class=code-tab-label data-lang=java id=tab-group-2-0_java-label>Java</label><div class=code-tabpanel role=tabpanel data-lang=java id=tab-group-2-0_java-panel aria-labelledby=tab-group-2-0_java-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=kn>import</span> <span class=nn>javax.crypto.Mac</span><span class=o>;</span>
 <span class=kn>import</span> <span class=nn>javax.crypto.spec.SecretKeySpec</span><span class=o>;</span>
 <span class=kn>import</span> <span class=nn>javax.xml.bind.DatatypeConverter</span><span class=o>;</span>
 
@@ -429,7 +441,18 @@
     <span class=n>mac</span><span class=o>.</span><span class=na>init</span><span class=o>(</span><span class=k>new</span> <span class=n>SecretKeySpec</span><span class=o>(</span><span class=n>merchantSecretKey</span><span class=o>.</span><span class=na>getBytes</span><span class=o>(</span><span class=s>&quot;UTF-8&quot;</span><span class=o>),</span> <span class=n>responseSignatureAlgorithm</span><span class=o>));</span>
     <span class=k>return</span> <span class=n>responseBase64Signature</span> <span class=o>!=</span> <span class=kc>null</span> <span class=o>&amp;&amp;</span> <span class=n>responseBase64Signature</span><span class=o>.</span><span class=na>equals</span><span class=o>(</span><span class=n>DatatypeConverter</span><span class=o>.</span><span class=na>printBase64Binary</span><span class=o>(</span><span class=n>mac</span><span class=o>.</span><span class=na>doFinal</span><span class=o>(</span><span class=n>responseBase64</span><span class=o>.</span><span class=na>getBytes</span><span class=o>(</span><span class=s>&quot;UTF-8&quot;</span><span class=o>))));</span>
 <span class=o>}</span>
-</pre></div></div><input name=tab-group-2 type=radio id=tab-group-2-1_php class=code-tab data-lang=php aria-controls=tab-group-2-1_php-panel role=tab><label for=tab-group-2-1_php class=code-tab-label data-lang=php id=tab-group-2-1_php-label>Php</label><div class=code-tabpanel role=tabpanel data-lang=php id=tab-group-2-1_php-panel aria-labelledby=tab-group-2-1_php-label><div class=codehilite><pre><span></span><span class=cp>&lt;?php</span>
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-1_php class=code-tab data-lang=php aria-controls=tab-group-2-1_php-panel role=tab><label for=tab-group-2-1_php class=code-tab-label data-lang=php id=tab-group-2-1_php-label>Php</label><div class=code-tabpanel role=tabpanel data-lang=php id=tab-group-2-1_php-panel aria-labelledby=tab-group-2-1_php-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class=code><div class=codehilite><pre><span></span><span class=cp>&lt;?php</span>
 
 <span class=sd>/**</span>
 <span class=sd> * @param string $responseBase64</span>
@@ -441,7 +464,38 @@
     <span class=nv>$signature</span> <span class=o>=</span> <span class=nb>hash_hmac</span><span class=p>(</span><span class=s1>&#39;sha256&#39;</span><span class=p>,</span> <span class=nb>base64_decode</span><span class=p>(</span><span class=nv>$responseBase64</span><span class=p>),</span> <span class=nv>$merchantSecreyKey</span><span class=p>);</span>
     <span class=k>return</span> <span class=nx>hash_equals</span><span class=p>(</span><span class=nv>$signature</span><span class=p>,</span> <span class=nb>base64_decode</span><span class=p>(</span><span class=nv>$signatureBase64</span><span class=p>));</span>
 <span class=p>}</span>
-</pre></div></div><input name=tab-group-2 type=radio id=tab-group-2-2_csharp class=code-tab data-lang=csharp aria-controls=tab-group-2-2_csharp-panel role=tab><label for=tab-group-2-2_csharp class=code-tab-label data-lang=csharp id=tab-group-2-2_csharp-label>Csharp</label><div class=code-tabpanel role=tabpanel data-lang=csharp id=tab-group-2-2_csharp-panel aria-labelledby=tab-group-2-2_csharp-label><div class=codehilite><pre><span></span> <span class=k>using</span>
+</pre></div></td></tr></table></div><input name=tab-group-2 type=radio id=tab-group-2-2_csharp class=code-tab data-lang=csharp aria-controls=tab-group-2-2_csharp-panel role=tab><label for=tab-group-2-2_csharp class=code-tab-label data-lang=csharp id=tab-group-2-2_csharp-label>Csharp</label><div class=code-tabpanel role=tabpanel data-lang=csharp id=tab-group-2-2_csharp-panel aria-labelledby=tab-group-2-2_csharp-label><table class=codehilitetable><tr><td class=linenos><div class=linenodiv><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class=code><div class=codehilite><pre><span></span> <span class=k>using</span>
   <span class=nn>System.Linq</span><span class=p>;</span>
 
   <span class=k>using</span>
@@ -473,7 +527,7 @@
   <span class=n>Boolean</span> <span class=n>result</span> <span class=p>=</span> <span class=n>computedSignature</span><span class=p>.</span><span class=n>SequenceEqual</span><span class=p>(</span><span class=n>expectedSignature</span><span class=p>);</span>            
   <span class=k>return</span> <span class=n>result</span><span class=p>;</span>        
 <span class=p>}</span>
-</pre></div></div></div>
+</pre></div></td></tr></table></div></div>
                 
                   
                 
